@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seja Voluntário ou Doador — Instituto Raízes da Igualdade</title>
+</head>
+<body>
+    <header>
+        <h1>Instituto Raízes da Igualdade</h1>
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Nossos projetos</a></li>
+                <li><a href="cadastro.html" aria-current="page">Seja voluntário ou doador</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section aria-labelledby="engajamento">
+            <h2 id="engajamento">Faça parte da transformação</h2>
+            <p>Seu apoio ajuda a levar educação antirracista para mais escolas e comunidades. Preencha seus dados e entraremos em contato.</p>
+        </section>
+
+        <section aria-labelledby="formulario-titulo">
+            <h2 id="formulario-titulo">Cadastro de interesse</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Seus dados</legend>
+
+                    <p>
+                        <label for="nome">Nome completo</label><br>
+                        <input type="text" id="nome" name="nome" autocomplete="name" required>
+                    </p>
+
+                    <p>
+                        <label for="email">E-mail</label><br>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
+                    </p>
+
+                    <p>
+                        <label for="telefone">Telefone</label><br>
+                        <input type="tel" id="telefone" name="telefone" autocomplete="tel"
+                               inputmode="numeric" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}"
+                               maxlength="15" placeholder="(00) 00000-0000" required>
+                    </p>
+
+                    <p>
+                        <label for="cpf">CPF</label><br>
+                        <input type="text" id="cpf" name="cpf" autocomplete="off"
+                               inputmode="numeric" pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}"
+                               maxlength="14" placeholder="000.000.000-00" required>
+                    </p>
+
+                    <p>
+                        <label for="nascimento">Data de nascimento</label><br>
+                        <input type="date" id="nascimento" name="nascimento" required>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Endereço</legend>
+
+                    <p>
+                        <label for="cep">CEP</label><br>
+                        <input type="text" id="cep" name="cep" autocomplete="postal-code"
+                               inputmode="numeric" pattern="[0-9]{5}-[0-9]{3}"
+                               maxlength="9" placeholder="00000-000" required>
+                    </p>
+
+                    <p>
+                        <label for="endereco">Endereço</label><br>
+                        <input type="text" id="endereco" name="endereco" autocomplete="street-address" required>
+                    </p>
+
+                    <p>
+                        <label for="cidade">Cidade</label><br>
+                        <input type="text" id="cidade" name="cidade" autocomplete="address-level2" required>
+                    </p>
+
+                    <p>
+                        <label for="estado">Estado</label><br>
+                        <select id="estado" name="estado" autocomplete="address-level1" required>
+                            <option value="">Selecione</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Como deseja contribuir?</legend>
+                    <p>
+                        <input type="radio" id="voluntario" name="interesse" value="voluntario" required>
+                        <label for="voluntario">Quero ser voluntário(a)</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="doador" name="interesse" value="doador">
+                        <label for="doador">Quero ser doador(a)</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="parceiro" name="interesse" value="parceiro">
+                        <label for="parceiro">Quero ser parceiro(a)</label>
+                    </p>
+                </fieldset>
+
+                <p>
+                    <label for="mensagem">Conte-nos como gostaria de ajudar (opcional)</label><br>
+                    <textarea id="mensagem" name="mensagem" rows="5"></textarea>
+                </p>
+
+                <p>
+                    <input type="checkbox" id="consentimento" name="consentimento" required>
+                    <label for="consentimento">Autorizo o contato do Instituto Raízes da Igualdade.</label>
+                </p>
+
+                <button type="submit">Enviar cadastro</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Instituto Raízes da Igualdade. Todos os direitos reservados.</p>
+        <address>Contato: <a href="mailto:contato@raizesdaigualdade.org.br">contato@raizesdaigualdade.org.br</a> | São Paulo — SP</address>
+    </footer>
+</body>
+</html>
