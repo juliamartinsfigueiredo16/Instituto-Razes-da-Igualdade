@@ -45,4 +45,4 @@ O projeto utiliza textos alternativos nas imagens, rótulos vinculados aos campo
 
 ## Autora
 
-Julia Martins Figueiredo
+Júlia Martins Figueiredo
