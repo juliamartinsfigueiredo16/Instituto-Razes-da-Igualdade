@@ -9,8 +9,13 @@
   <title>Instituto Raízes da Igualdade</title>
 </head>
 <body>
+  <a class="atalho-conteudo" href="#app">Pular para o conteúdo principal</a>
+
   <header class="cabecalho-site">
     <a class="marca" href="#inicio">Instituto Raízes da Igualdade</a>
+    <button id="alternar-contraste" class="botao-contraste" type="button" aria-pressed="false">
+      Ativar alto contraste
+    </button>
     <nav aria-label="Navegação principal">
       <ul>
         <li><a href="#inicio">Início</a></li>
@@ -23,8 +28,8 @@
   <p id="status-rede" class="aviso-rede" role="status" aria-live="polite" hidden></p>
 
   <main id="app" tabindex="-1">
-    <section>
-      <h1>Plataforma em preparação</h1>
+    <section aria-labelledby="titulo-inicial">
+      <h1 id="titulo-inicial">Plataforma em preparação</h1>
       <p>A interface dinâmica da ONG será construída nesta Experiência Prática III.</p>
     </section>
   </main>
@@ -46,6 +51,7 @@
   <script src="../js/formulario.js" defer></script>
   <script src="../js/router.js" defer></script>
   <script src="../js/rede.js" defer></script>
+  <script src="../js/acessibilidade.js" defer></script>
   <script src="../js/app.js" defer></script>
 </body>
 </html>

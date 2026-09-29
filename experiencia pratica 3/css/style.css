@@ -6,7 +6,41 @@
   --espaco: 1rem;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cor-fundo: #1c1917;
+    --cor-superficie: #292524;
+    --cor-texto: #ffffff;
+  }
+
+  .campo-formulario input {
+    background: #1c1917;
+    color: #ffffff;
+    border-color: #d6d3d1;
+  }
+
+  .cartao-projeto { background: #1c1917; }
+}
+
 * { box-sizing: border-box; }
+
+.atalho-conteudo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  background: #ffffff;
+  color: #421126;
+  font-weight: 700;
+  transform: translateY(-120%);
+}
+
+.atalho-conteudo:focus {
+  transform: translateY(0);
+  outline: 3px solid #d9902b;
+  outline-offset: 2px;
+}
 
 body {
   min-height: 100vh;
@@ -26,13 +60,61 @@ body {
   color: var(--cor-superficie);
 }
 
+.cabecalho-site { position: relative; }
+
 .marca,
 nav a { color: inherit; font-weight: 700; text-decoration: none; }
+.botao-contraste {
+  position: absolute;
+  top: 0.75rem;
+  right: max(var(--espaco), calc((100% - 70rem) / 2));
+  padding: 0.45rem 0.7rem;
+  border: 2px solid currentColor;
+  border-radius: 0.35rem;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.botao-contraste:focus-visible {
+  outline: 3px solid #f2c14e;
+  outline-offset: 3px;
+}
+
+@media (max-width: 34rem) {
+  .botao-contraste {
+    position: static;
+    display: block;
+    margin-top: var(--espaco);
+  }
+}
+
 nav ul { display: flex; flex-wrap: wrap; gap: var(--espaco); margin: var(--espaco) 0 0; padding: 0; list-style: none; }
 main { width: min(100% - 2rem, 70rem); margin: 0 auto; padding-block: 3rem; }
 main section { padding: 2rem; border-radius: 0.75rem; background: var(--cor-superficie); }
 
+.imagem-destaque {
+  margin: 2rem 0 0;
+}
+
+.imagem-destaque img {
+  display: block;
+  width: 100%;
+  max-width: 60rem;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
 nav a[aria-current="page"] { color: #f2c14e; text-decoration: underline; }
+
+/* O foco não depende apenas da cor: fica evidente para quem usa Tab. */
+nav a:focus-visible {
+  outline: 3px solid #f2c14e;
+  outline-offset: 4px;
+  border-radius: 0.2rem;
+}
 
 .aviso-rede {
   margin: 0;
@@ -115,9 +197,57 @@ nav a[aria-current="page"] { color: #f2c14e; text-decoration: underline; }
 #formulario-cadastro button:hover { background: #421126; }
 #formulario-cadastro button:focus-visible { outline: 3px solid #f2c14e; outline-offset: 3px; }
 
+.btn-close:focus-visible {
+  outline: 3px solid #292524;
+  outline-offset: 3px;
+}
+
 .feedback-formulario {
   min-height: 1.6rem;
   margin: 0;
   color: var(--cor-primaria);
   font-weight: 700;
+}
+
+/* Perfil opcional de alto contraste, acionado pelo botao da pagina. */
+body.alto-contraste {
+  --cor-primaria: #000000;
+  --cor-fundo: #000000;
+  --cor-superficie: #000000;
+  --cor-texto: #ffffff;
+}
+
+.alto-contraste .cabecalho-site,
+.alto-contraste .rodape-site,
+.alto-contraste main section,
+.alto-contraste .cartao-projeto,
+.alto-contraste .campo-formulario input,
+.alto-contraste .toast {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff;
+}
+
+.alto-contraste nav a[aria-current="page"],
+.alto-contraste .cartao-projeto h2,
+.alto-contraste .feedback-formulario {
+  color: #ffff00;
+}
+
+.alto-contraste .mensagem-erro,
+.alto-contraste .aviso-rede {
+  background: #000000;
+  color: #ffff00;
+  border: 2px solid #ffff00;
+}
+
+.alto-contraste #formulario-cadastro button {
+  background: #ffffff;
+  color: #000000;
+  border: 2px solid #ffffff;
+}
+
+.alto-contraste :focus-visible {
+  outline: 4px solid #ffff00;
+  outline-offset: 4px;
 }
