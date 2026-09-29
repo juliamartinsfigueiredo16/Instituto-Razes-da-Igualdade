@@ -54,7 +54,11 @@ experiencia pratica 3/
 
 ## Build para produção
 
-Por utilizar HTML, CSS e JavaScript puro, não existe um comando de build obrigatório. Para publicação, os arquivos podem ser enviados diretamente a uma hospedagem estática. Antes do deploy, recomenda-se revisar os caminhos dos arquivos, comprimir imagens e testar a aplicação em diferentes navegadores.
+O projeto utiliza `experiencia pratica 3/build.ps1` para gerar a pasta `dist/`, contendo HTML, CSS e JavaScript reduzidos, além das imagens otimizadas. Execute o script no PowerShell antes da publicação.
+
+## Deploy no GitHub Pages
+
+O workflow `.github/workflows/deploy-pages.yml` gera a build e publica automaticamente a SPA quando há um envio para a branch `main`. No repositório remoto, basta selecionar **Settings > Pages > Source: GitHub Actions** uma única vez.
 
 ## Testes manuais
 

@@ -59,11 +59,31 @@ function criarToast() {
 }
 
 function templateInicio() {
-  return criarPagina(
+  const secao = criarPagina(
     "Educação antirracista transforma vidas",
     "Conheça o Instituto Raízes da Igualdade e participe da construção de uma educação mais justa.",
     "titulo-inicio"
   );
+
+  const imagem = document.createElement("img");
+  const fonteWebp = document.createElement("source");
+  const figura = document.createElement("figure");
+  const picture = document.createElement("picture");
+
+  fonteWebp.srcset = "../imagens/educacao-antirracista-480.webp 480w, ../imagens/educacao-antirracista-960.webp 960w";
+  fonteWebp.sizes = "(max-width: 600px) 100vw, 960px";
+  fonteWebp.type = "image/webp";
+  imagem.src = "../imagens/educacao-antirracista-960.jpg";
+  imagem.alt = "Estudantes negros e uma educadora reunidos em uma atividade de leitura.";
+  imagem.width = 960;
+  imagem.height = 540;
+  imagem.loading = "lazy";
+  imagem.decoding = "async";
+  picture.append(fonteWebp, imagem);
+  figura.className = "imagem-destaque";
+  figura.append(picture);
+  secao.append(figura);
+  return secao;
 }
 
 function templateProjetos() {
