@@ -8,6 +8,24 @@
 
 * { box-sizing: border-box; }
 
+.atalho-conteudo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  background: #ffffff;
+  color: #421126;
+  font-weight: 700;
+  transform: translateY(-120%);
+}
+
+.atalho-conteudo:focus {
+  transform: translateY(0);
+  outline: 3px solid #d9902b;
+  outline-offset: 2px;
+}
+
 body {
   min-height: 100vh;
   margin: 0;

@@ -5,9 +5,13 @@ function criarElemento(tag, texto, classe) {
   return elemento;
 }
 
-function criarPagina(titulo, descricao) {
+function criarPagina(titulo, descricao, idTitulo) {
   const secao = document.createElement("section");
-  secao.append(criarElemento("h1", titulo), criarElemento("p", descricao));
+  const tituloPagina = criarElemento("h1", titulo);
+
+  tituloPagina.id = idTitulo;
+  secao.setAttribute("aria-labelledby", idTitulo);
+  secao.append(tituloPagina, criarElemento("p", descricao));
   return secao;
 }
 
@@ -57,14 +61,16 @@ function criarToast() {
 function templateInicio() {
   return criarPagina(
     "Educação antirracista transforma vidas",
-    "Conheça o Instituto Raízes da Igualdade e participe da construção de uma educação mais justa."
+    "Conheça o Instituto Raízes da Igualdade e participe da construção de uma educação mais justa.",
+    "titulo-inicio"
   );
 }
 
 function templateProjetos() {
   const secao = criarPagina(
     "Projetos em destaque",
-    "Nossas iniciativas levam formação, literatura e cidadania para escolas e comunidades."
+    "Nossas iniciativas levam formação, literatura e cidadania para escolas e comunidades.",
+    "titulo-projetos"
   );
   const lista = document.createElement("div");
   lista.className = "lista-projetos";
@@ -98,7 +104,8 @@ function templateProjetos() {
 function templateCadastro() {
   const secao = criarPagina(
     "Faça parte da transformação",
-    "Preencha seus dados para demonstrar interesse em voluntariado, doação ou parceria."
+    "Preencha seus dados para demonstrar interesse em voluntariado, doação ou parceria.",
+    "titulo-cadastro"
   );
   const formulario = document.createElement("form");
   const mensagem = document.createElement("p");
