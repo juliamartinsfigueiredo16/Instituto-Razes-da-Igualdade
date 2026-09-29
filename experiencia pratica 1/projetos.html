@@ -3,15 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../experiencia pratica 2/style.css">
     <title>Projetos e Iniciativas — Instituto Raízes da Igualdade</title>
 </head>
 <body>
     <header>
         <h1>Instituto Raízes da Igualdade</h1>
+        <input class="menu-checkbox" type="checkbox" id="menu-toggle">
+        <label class="botao-menu" for="menu-toggle"><span aria-hidden="true">☰</span><span>Menu</span></label>
         <nav aria-label="Navegação principal">
-            <ul>
+            <ul class="menu-lista">
                 <li><a href="index.html">Início</a></li>
-                <li><a href="projetos.html" aria-current="page">Nossos projetos</a></li>
+                <li class="item-com-submenu">
+                    <a href="projetos.html" aria-current="page">Nossos projetos</a>
+                    <input class="submenu-checkbox" type="checkbox" id="projetos-toggle">
+                    <label class="botao-submenu" for="projetos-toggle"><span aria-hidden="true">⌄</span><span class="texto-visualmente-oculto">Abrir submenu de projetos</span></label>
+                    <ul class="submenu">
+                        <li><a href="projetos.html#baoba">Baobá nas Escolas</a></li>
+                        <li><a href="projetos.html#quilombo">Quilombo Literário</a></li>
+                        <li><a href="projetos.html#vozes">Projeto VOZES</a></li>
+                    </ul>
+                </li>
                 <li><a href="cadastro.html">Seja voluntário ou doador</a></li>
             </ul>
         </nav>
@@ -26,19 +38,22 @@
         <section aria-labelledby="frentes-de-acao">
             <h2 id="frentes-de-acao">Nossas frentes de ação</h2>
 
-            <article>
+            <article id="baoba">
+                <span class="badge">Formação de educadores</span>
                 <h3>Baobá nas Escolas — Formação de Educadores</h3>
                 <p>Oferece capacitação continuada para professores da educação básica sobre letramento antirracista e metodologias para o ensino da História e Cultura Afro-Brasileira.</p>
                 <p><strong>Impacto:</strong> mais de 1.200 educadores formados.</p>
             </article>
 
-            <article>
+            <article id="quilombo">
+                <span class="badge">Literatura e cultura</span>
                 <h3>Quilombo Literário — Biblioteca Comunitária</h3>
                 <p>Arrecada e distribui acervos infantojuvenis com protagonistas negros e indígenas para escolas públicas e bibliotecas comunitárias.</p>
                 <p><strong>Impacto:</strong> mais de 5.000 livros doados.</p>
             </article>
 
-            <article>
+            <article id="vozes">
+                <span class="badge">Juventude e cidadania</span>
                 <h3>VOZES — Juventude e Cidadania</h3>
                 <p>Promove rodas de conversa e oficinas de audiovisual voltadas ao protagonismo de jovens negros da periferia e ao combate à discriminação.</p>
                 <p><strong>Impacto:</strong> 15 comunidades atendidas.</p>

@@ -3,15 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../experiencia pratica 2/style.css">
     <title>Instituto Raízes da Igualdade — Educação Antirracista</title>
 </head>
 <body>
     <header>
         <h1>Instituto Raízes da Igualdade</h1>
+        <input class="menu-checkbox" type="checkbox" id="menu-toggle">
+        <label class="botao-menu" for="menu-toggle"><span aria-hidden="true">☰</span><span>Menu</span></label>
         <nav aria-label="Navegação principal">
-            <ul>
+            <ul class="menu-lista">
                 <li><a href="index.html" aria-current="page">Início</a></li>
-                <li><a href="projetos.html">Nossos projetos</a></li>
+                <li class="item-com-submenu">
+                    <a href="projetos.html">Nossos projetos</a>
+                    <input class="submenu-checkbox" type="checkbox" id="projetos-toggle">
+                    <label class="botao-submenu" for="projetos-toggle"><span aria-hidden="true">⌄</span><span class="texto-visualmente-oculto">Abrir submenu de projetos</span></label>
+                    <ul class="submenu">
+                        <li><a href="projetos.html#baoba">Baobá nas Escolas</a></li>
+                        <li><a href="projetos.html#quilombo">Quilombo Literário</a></li>
+                        <li><a href="projetos.html#vozes">Projeto VOZES</a></li>
+                    </ul>
+                </li>
                 <li><a href="cadastro.html">Seja voluntário ou doador</a></li>
             </ul>
         </nav>
@@ -51,7 +63,7 @@
 
     <footer>
         <p>&copy; 2026 Instituto Raízes da Igualdade. Todos os direitos reservados.</p>
-        <address>Contato: <a href="mailto:contato@raizesdaigualdade.org.br">contato@raizesdaigualdade.org.br</a> | São Paulo — SP</address>
+        <address>Contato: <a href="mailto:contato@raizesdaigualdade.org.br">contato@raizesdaigualdade.org.br</a> | Salvador — BA</address>
     </footer>
 </body>
 </html>

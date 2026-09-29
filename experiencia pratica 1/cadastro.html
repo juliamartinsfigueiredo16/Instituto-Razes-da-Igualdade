@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../experiencia pratica 2/style.css">
     <title>Seja Voluntário ou Doador — Instituto Raízes da Igualdade</title>
 </head>
 <body>
@@ -25,7 +26,8 @@
 
         <section aria-labelledby="formulario-titulo">
             <h2 id="formulario-titulo">Cadastro de interesse</h2>
-            <form action="#" method="post">
+            <p class="alerta alerta--info" role="status">Os campos marcados como obrigatórios precisam ser preenchidos para o envio do cadastro.</p>
+            <form action="#toast-cadastro" method="post">
                 <fieldset>
                     <legend>Seus dados</legend>
 
@@ -71,7 +73,7 @@
 
                     <p>
                         <label for="endereco">Endereço</label><br>
-                        <input type="text" id="endereco" name="endereco" autocomplete="street-address" required>
+                        <input type="text" id="endereco" name="endereco" autocomplete="address-line1" required>
                     </p>
 
                     <p>
@@ -138,16 +140,28 @@
                 <p>
                     <input type="checkbox" id="consentimento" name="consentimento" required>
                     <label for="consentimento">Autorizo o contato do Instituto Raízes da Igualdade.</label>
+                    <a class="link-feedback" href="#modal-privacidade">Como meus dados serão utilizados?</a>
                 </p>
 
                 <button type="submit">Enviar cadastro</button>
             </form>
+            <aside id="toast-cadastro" class="toast toast--sucesso" role="status" aria-live="polite">
+                Cadastro enviado com sucesso. Em breve, entraremos em contato.
+            </aside>
+        </section>
+
+        <section id="modal-privacidade" class="modal" role="dialog" aria-modal="true" aria-labelledby="titulo-privacidade">
+            <div class="modal__conteudo">
+                <h2 id="titulo-privacidade">Uso dos dados</h2>
+                <p>Os dados enviados serão utilizados apenas para o contato sobre voluntariado, doação ou parceria com o Instituto.</p>
+                <a class="modal__fechar" href="#formulario-titulo">Fechar janela</a>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2026 Instituto Raízes da Igualdade. Todos os direitos reservados.</p>
-        <address>Contato: <a href="mailto:contato@raizesdaigualdade.org.br">contato@raizesdaigualdade.org.br</a> | São Paulo — SP</address>
+        <address>Contato: <a href="mailto:contato@raizesdaigualdade.org.br">contato@raizesdaigualdade.org.br</a> | Salvador — BA</address>
     </footer>
 </body>
 </html>

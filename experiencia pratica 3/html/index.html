@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plataforma do Instituto Raízes da Igualdade.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Instituto Raízes da Igualdade</title>
+</head>
+<body>
+  <header class="cabecalho-site">
+    <a class="marca" href="#inicio">Instituto Raízes da Igualdade</a>
+    <nav aria-label="Navegação principal">
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#cadastro">Participe</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <p id="status-rede" class="aviso-rede" role="status" aria-live="polite" hidden></p>
+
+  <main id="app" tabindex="-1">
+    <section>
+      <h1>Plataforma em preparação</h1>
+      <p>A interface dinâmica da ONG será construída nesta Experiência Prática III.</p>
+    </section>
+  </main>
+
+  <template id="template-projeto">
+    <article class="cartao-projeto">
+      <h2 data-titulo></h2>
+      <p data-descricao></p>
+    </article>
+  </template>
+
+  <footer class="rodape-site">
+    <p>Instituto Raízes da Igualdade — Salvador, BA</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous" defer></script>
+  <script src="../js/storage.js" defer></script>
+  <script src="../js/templates.js" defer></script>
+  <script src="../js/formulario.js" defer></script>
+  <script src="../js/router.js" defer></script>
+  <script src="../js/rede.js" defer></script>
+  <script src="../js/app.js" defer></script>
+</body>
+</html>
